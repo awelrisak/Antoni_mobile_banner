@@ -1,6 +1,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
 
 <style>
         /* Apply CSS styles here */
@@ -15,7 +15,7 @@
          all: unset;
         }
         
-     .banner {
+     .container {
          position: relative;
          width: 100%;
          height: 100%;
@@ -30,7 +30,8 @@
      
      .left-component img{
          width: 100%;
-         height: 100%;         
+         height: 100%;   
+         object-fit: contain;      
      }
      
      .info-container {
@@ -85,6 +86,8 @@
             .right-component{
               flex-grow: 1;
             }
+            
+            
         }
         
          @media (min-width: 200px) and (max-width: 359px){
@@ -104,6 +107,9 @@
             .info-container .footer{
                 line-height: 0.8rem;
             }
+            .container{
+                justify-content: center;
+            }
         }
         
          @media (min-width: 360px) and (max-width: 427px){      
@@ -120,21 +126,19 @@
              .right-component{
                  flex-basis: 14%;
              }
-             .banner{
-                 justify-content: center;
-             }
+             
         }
         
     </style>
     
     <a href="https://bit.ly/3ESxsm8" target="_blank">
-       <div class="banner">
+       <div class="container">
        
           <div
             class="left-component"
            >
             <img 
-              src="leftcomponent.png"
+              src="left.png"
               alt="left component"
             />
           </div> 
@@ -165,7 +169,7 @@
             class="right-component"
           >
             <img 
-              src="rightcomponent.png"
+              src="right.png"
               alt="right component"
             />
           </div>
