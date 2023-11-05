@@ -13,84 +13,34 @@
       margin: 0;
       padding: 0;
     }
+    
     body {
       width: 100%;
-      height: 100%;
-      min-height: 75px;
-      background-color: white;
-      
+      background: gray;
     }
-
-    a {
-      all: unset;
-      position: absolute;
+    
+    .container {
+      height: 100%;
       width: 100%;
-      min-height: 75px;
-      height: 100%;
+      background: green;
       display: flex;
-      justify-content: space-between;
-      cursor: pointer;
-    }
-    
-   .left {
-     height: 100%;
-     position: relative;
-     margin-left: 5px;
-   }
-   
-   .left img {
-     max-height: 88%;
-   }
-   
-   .text {
-     height: 100%;
-     position: relative;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-   }
-   
-   .text img {
-     height: 80%;
-   }
-   
-   .logo {
-     height: 100%;
-     position: relative;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     background-color: yellow;
-   }
-   
-   .logo img {
-     height: 30%;
-   }
-
-    /*@media only screen and (max-width: 215px) {
-      
-    }*/
-    
-    @media only screen and (max-width: 505px) {
-       .left{
-         display: none;
-       }
-    }
-    @media only screen and (min-width: 390px) {
-      
     }
   </style>
   <body>
     <a href="https://bit.ly/3s5kYV8" target="_blank">
-      <div class="left">
-        <img src="left.png" alt="left" />
+    
+    <div class="container">
+    <div class="left">
+       <!-- <img src="left.png" alt="left" />-->
       </div>
       <div class="text">
-        <img src="text.png" alt="text" />
+       <!-- <img src="text.png" alt="text" /> -->
       </div>
       <div class="logo">
-        <img src="logo.png" alt="logo" />
-      </div>
+       <!-- <img src="logo.png" alt="logo" /> -->
+    </div>
+    </div>
+      
     </a>
   </body>
 </html>
