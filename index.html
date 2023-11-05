@@ -14,30 +14,86 @@
       padding: 0;
     }
     
-    body {
-      width: 100%;
-      background: gray;
+    body {      
+      height: 100vh;
+      background: white;
+      overflow: hidden;
+    }
+   
+   div {
+      position: relative;
+    } 
+   
+    .container, .text {     
+      display: flex;
+      align-items: center;
     }
     
-    .container {
+    .container, .left, .logo, img {
       height: 100%;
-      width: 100%;
-      background: green;
-      display: flex;
     }
+    
+    .text {
+      height: 87%;
+      flex: 1;
+      margin-right: 6px;
+      justify-content: center;
+    }
+    
+    .text img {
+      width: 100%;      
+    }
+            
+    .logo img {     
+      margin:  0px 6px;
+    }
+    img {
+      object-fit: contain;
+    }
+    
+    @media screen and (max-width: 230px) {
+      .container{
+        justify-content: center;
+      }
+       .left, .text{
+         display: none;
+       }       
+       .logo img{
+         width: 100%
+       }
+    } 
+    
+    @media screen and (max-width: 355px) {
+       .left{
+         display: none;
+       }
+       .logo{
+         order: 1;
+       }
+       .text{
+         order: 2
+       }
+    } 
+    
+       
   </style>
   <body>
     <a href="https://bit.ly/3s5kYV8" target="_blank">
     
     <div class="container">
+    
     <div class="left">
-       <!-- <img src="left.png" alt="left" />-->
+       <img src="left.png" alt="left" />
       </div>
+
+      
       <div class="text">
-       <!-- <img src="text.png" alt="text" /> -->
+       <img src="text.png" alt="text" />
       </div>
+      
+      
       <div class="logo">
-       <!-- <img src="logo.png" alt="logo" /> -->
+       <img src="logo.png" alt="logo" />
     </div>
     </div>
       
