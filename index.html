@@ -1,102 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Marzoli</title>
-  </head>
-  <style>
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    
-    body {      
-      height: 100vh;
-      background: white;
-      overflow: hidden;
-    }
-   
-   div {
-      position: relative;
-    } 
-   
-    .container, .text {     
-      display: flex;
-      align-items: center;
-    }
-    
-    .container, .left, .logo, img {
-      height: 100%;
-    }
-    
-    .text {
-      height: 87%;
-      flex: 1;
-      margin-right: 6px;
-      justify-content: center;
-    }
-    
-    .text img {
-      width: 100%;      
-    }
-            
-    .logo img {     
-      margin:  0px 6px;
-    }
-    img {
-      object-fit: contain;
-    }
-    
-    @media screen and (max-width: 230px) {
-      .container{
-        justify-content: center;
+    <title>Pizza Al Pesto</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Rubik", sans-serif;
+        /*font-optical-sizing: auto;
+        font-style: normal;*/
       }
-       .left, .text{
-         display: none;
-       }       
-       .logo img{
-         width: 100%
-       }
-    } 
-    
-    @media screen and (max-width: 355px) {
-       .left{
-         display: none;
-       }
-       .logo{
-         order: 1;
-       }
-       .text{
-         order: 2
-       }
-    } 
-    
-       
-  </style>
-  <body>
-    <a href="https://bit.ly/3s5kYV8" target="_blank">
-    
-    <div class="container">
-    
-    <div class="left">
-       <img src="left.png" alt="left" />
-      </div>
+      
+      body {
+        position: relative;
+        background-color: white;
+        height: 100vh;
+        overflow: hidden;
+        min-width: 100px;
+        text-align: center;
+      }
+           
+      .display-around {
+        display: flex;
+        justify-content: space-around;
+        align-items: center; 
+      }
 
+      .container {
+        background-color: rgba(255,255,255,0.7); 
+        flex-direction: column;
+        gap: 2px;
+        z-index: 99;
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+      }
       
-      <div class="text">
-       <img src="text.png" alt="text" />
-      </div>
+      .heading {
+        font-size: 19px;
+        font-weight: medium;
+      }
       
+      .body {
+        font-size: 14px;
+      }
+
+      .btn {
+        font-size: 14px;
+        padding: 3px 6px;
+        color: white; 
+        background-color: #d20000;
+        border-radius: 6px; 
+      }
       
-      <div class="logo">
-       <img src="logo.png" alt="logo" />
+      .btn svg {
+        margin-right: 8px;
+        flex-shrink: 0;
+      }
+      
+      .img {
+          position: absolute;
+          height: 50%;
+          width: auto;
+      }
+            
+      .logo {      
+        right: 8px;
+        bottom: 8px; 
+        z-index: 10;
+      }
+      
+      .img-1 {
+        top: 0;
+        left: 0;
+        height: 70%;
+      }
+      
+      .img-2 {       
+        top: 0;
+        right: 8px;
+      }
+      
+      .img-3 {     
+        bottom: 0;
+        left: 10%;
+        height: 70%;
+      }
+      
+       a {
+        all: unset;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        text-decoration: none;
+      }
+      
+       @media screen and (max-width: 115px) {
+        .btn {
+          font-size: 9px;   
+          flex-direction: column;
+          z-index: 2;      
+        }
+      }
+      
+      @media screen and (max-width: 138px) {
+        .btn {
+          font-size: 11px;          
+        }
+      }
+      
+      @media screen and (max-width: 160px) {
+        .heading, .body {
+          display: none;          
+        }
+      }
+      
+      @media screen and (max-width: 260px) {
+        .logo {
+          display: none;          
+        }
+      }
+      
+      @media screen and (max-width: 360px) {
+        .logo {
+          position: static;          
+        }
+        .img-2, .img-3 {
+          display: none
+        }
+      }
+
+    </style>
+  </head>
+  <body class="display-around">
+    <img src="img1.png" alt="first image" class="img img-1"/>
+    <img src="img2.png" alt="second image" class="img img-2"/>
+    <img src="img3.png" alt="third image" class="img img-3"/>
+    <div class="display-center container ">
+      <p class="heading">Wir Liefern Lecker</p>
+      <p class="body">In Chur & Umgebung</p>
+      <div class="btn display-around">
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 26 21"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M3.65813 0.53125C3.36097 0.53125 3.09616 0.718796 2.99754 0.999113L0.590017 7.84167C0.213456 8.91165 5.17228 9.41141 5.09125 10.5L4.44822 19.1396C4.35029 20.4565 6.975 20.4686 7.01977 20.4687C7.02117 20.4688 7.01954 20.4688 7.02093 20.4687C7.06571 20.4686 9.69042 20.4565 9.59249 19.1396L8.94946 10.5C8.88988 9.69843 11.3439 9.22545 12.653 8.59547C13.3354 8.26709 13.3216 7.47481 13.0703 6.76046L11.0432 0.999113C10.9445 0.718796 10.6797 0.53125 10.3826 0.53125V0.53125C9.96248 0.53125 9.63691 0.898562 9.68736 1.31562L10.1395 5.0542C10.1955 5.5172 9.92056 5.95642 9.47963 6.10833V6.10833C8.87894 6.31526 8.24169 5.91043 8.17378 5.27874L7.73212 1.1706C7.69303 0.80695 7.3861 0.53125 7.02035 0.53125V0.53125C6.65461 0.53125 6.34768 0.80695 6.30858 1.1706L5.86693 5.27874C5.79901 5.91043 5.16177 6.31526 4.56108 6.10833V6.10833C4.12015 5.95642 3.84518 5.5172 3.90118 5.05421L4.35335 1.31562C4.40379 0.898563 4.07823 0.53125 3.65813 0.53125V0.53125ZM25.0253 6.53125C25.0253 3.21754 22.069 0.325552 19.3318 2.19335C19.0942 2.35546 18.8844 2.52696 18.7105 2.7067C17.6582 3.6855 17.3089 5.87211 17.3089 7.17708V10.5V10.5C17.3089 12.7667 20.8071 13.8752 20.4144 16.1077L19.881 19.1396C19.6535 20.4333 22.3276 20.4678 22.4489 20.4687C22.4528 20.4688 22.4539 20.4688 22.4578 20.4687C22.5786 20.4679 25.0253 20.4359 25.0253 19.1396V6.53125Z"
+            fill="white"
+          />
+        </svg>
+        <span>Jetzt bestellen</span>
+      </div>  
     </div>
-    </div>
-      
-    </a>
+    
+    <img src="logo.png" alt="logo" class="img logo"/>
+    
+    <a href=" https://bit.ly/3RBiLe5" target="_blank"></a>
+    
   </body>
 </html>
